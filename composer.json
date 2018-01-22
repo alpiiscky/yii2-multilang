@@ -1,0 +1,21 @@
+{
+    "name": "alpiiscky/yii2-multilang",
+    "description": "Результаты переработки статьи с хабра",
+    "type": "yii2-extension",
+    "keywords": ["yii2","multilang","habr"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Дмитрий",
+            "email": "akhmetov.dy@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "alpiiscky\\multilang\\": ""
+        }
+    }
+}
