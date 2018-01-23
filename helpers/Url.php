@@ -7,7 +7,7 @@ use yii\helpers\Url as MainUrl;
 
 class Url extends MainUrl
 {
-    public function actionToLang($params)
+    public static function toLang($url = '', $params)
     {
         $default_lang = Language::getDefaultLang();
 
@@ -22,7 +22,7 @@ class Url extends MainUrl
             $lang = Language::getCurrent();
         }
 
-        $url = \Yii::$app->urlManager->createUrl($params);
+        //$url = \Yii::$app->urlManager->createUrl($params);
 
         if( $url == '/' ){
             return ($default_lang->id != $lang->id) ? '/'.$lang->url : '/';

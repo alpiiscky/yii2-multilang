@@ -54,5 +54,29 @@ composer require --prefer-dist alpiiscky/yii2-multilang "*"
     ]
 ```
 
+Миграции
+-----
 ```php
-<?= \alpiiscky\multilang\widgets\LanguageWidget::widget([]); ?>```
+php yii migrate --migrationPath=vendor/alpiiscky/yii2-multilang/migrations/
+```
+
+Виджет выбора языка
+-----
+```php
+<?= \alpiiscky\multilang\widgets\LanguageWidget::widget([]); ?>
+```
+
+
+Создание url
+-----
+```php
+<?php
+use alpiiscky\multilang\helpers\Url;
+use alpiiscky\multilang\models\Language;
+
+$current_lang = Language::getCurrent();
+?>
+
+
+<?= Url::toLang('/book', ['lang_id' => $current_lang->id]) ?>
+```
